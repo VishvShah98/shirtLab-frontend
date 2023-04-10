@@ -8,7 +8,7 @@ export default function AiTextPrompt() {
 
   const handleGenerate = async () => {
     try {
-      const response = await fetch("http://localhost:8080/api/dalle", {
+      const response = await fetch(import.meta.env.VITE_BASE_URL + "/api/dalle", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
